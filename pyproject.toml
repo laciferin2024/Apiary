@@ -4,13 +4,13 @@ build-backend = "maturin"
 
 [project]
 name = "apiary"
-version = "0.5.1"
+# version = "0.5.1" #Fixed: `project.dynamic` must not specify `version` when `project.version` is present in pyproject.toml
 description = "A user-friendly tool for seamless interaction with the CoopHive protocol, enabling decentralized execution of computational workloads and management of payments and storage."
 authors = [
     { name = "Levi Rybalov" },
     { name = "Matteo Manzi" },
     { name = "疒奀" },
-    { name = "Aayushi Jain" }
+    { name = "Aayushi Jain" },
 ]
 requires-python = ">=3.12"
 readme = "README.md"
@@ -33,7 +33,7 @@ dependencies = [
     "ipykernel>=6.29.0,<7.0.0",
     "matplotlib>=3.9",
 ]
-packages = [{include = "apiary"}]
+packages = [{ include = "apiary" }]
 
 [project.scripts]
 "apiary" = "apiary.__main__:cli"
@@ -45,7 +45,7 @@ dev = [
     "ruff>=0.6.0, < 1.0.0",
     "pydocstyle>=6.3.0,<6.4.0",
     "pytest>=8.3.0,<8.4.0",
-    "pydeps>=2.0.0,<2.1.0"
+    "pydeps>=2.0.0,<2.1.0",
 ]
 
 [tool.maturin]
