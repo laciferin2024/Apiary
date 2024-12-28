@@ -9,3 +9,7 @@ install:
   
 build:
   uvx maturin develop
+
+
+api-key-gen:
+  lighthouse-web3 api-key -n
